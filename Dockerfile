@@ -12,7 +12,7 @@ RUN \
     apt-get install -y apache2 && \
     rm -rf /var/lib/apt/lists/*
 RUN \
-    a2enmod rewrite proxy_http
+    a2enmod rewrite proxy_http headers
 
 ADD gateway.conf /etc/apache2/sites-enabled/000-default.conf
 
